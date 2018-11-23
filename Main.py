@@ -12,7 +12,7 @@ total_random_points = 1000  # int(input("\nNumber of random points for Monte Car
 start_time = time.time()
 
 # name for new workbook. Convention will be (Trial length)Pi(Trial Number)
-name = str(total_random_points) + 'Pi' + str(1) + '.xlsx'
+name = str(total_random_points) + 'Pi' + str(10) + '.xlsx'
 # setting up an Excel workbook for the project
 workbook = xlsx.Workbook(name)
 worksheet = workbook.add_worksheet()
