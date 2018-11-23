@@ -67,8 +67,13 @@ print (f"Execution Time: {time.time() - start_time} seconds\n")
 worksheet.write_string(0,0, 'X values')
 worksheet.write_string(0,1, 'Y values')
 
+#creating new arrays to deal with the nonsense data
+length_array = len(x_plot_array)
+X_Values = x_plot_array [total_random_points:length_array]
+Y_Values = y_plot_array [total_random_points:length_array]
 #creating a 2d array to make it easier to export to excel
-combined = np.vstack((x_plot_array,y_plot_array))
+
+combined = np.vstack((X_Values,Y_Values))
 
 
 row =1
