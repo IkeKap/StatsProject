@@ -1,12 +1,12 @@
 # Credits for some snippets of code to https://github.com/dandrewmyers/numerical/blob/master/mc_pi.py
 
-import matplotlib.pyplot as plt
+import matplotlib.pyplot as plt # for visual representations of the data
 import numpy as np
-import xlsxwriter as xlsx
+import xlsxwriter as xlsx # to export data to excel workbooks
 import time as time  # to show time to calculate
 
 # input total number of random points
-total_random_points = 500000  # int(input("\nNumber of random points for Monte Carlo estimate of Pi?\n>"))
+total_random_points = 100000  # int(input("\nNumber of random points for Monte Carlo estimate of Pi?\n>"))
 
 # start time of calculation
 start_time = time.time()
