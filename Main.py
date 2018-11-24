@@ -6,7 +6,7 @@ import xlsxwriter as xlsx
 import time as time  # to show time to calculate
 
 # input total number of random points
-total_random_points = 1000000  # int(input("\nNumber of random points for Monte Carlo estimate of Pi?\n>"))
+total_random_points = 50  # int(input("\nNumber of random points for Monte Carlo estimate of Pi?\n>"))
 
 # start time of calculation
 start_time = time.time()
