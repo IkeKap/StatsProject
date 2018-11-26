@@ -4,7 +4,7 @@ Using a Monte Carlo simulation to calculate a value for π
 
 ![2bb5d450319f0a721c07d202cc35d324](https://user-images.githubusercontent.com/24295451/48987535-e97d0480-f0ed-11e8-9820-bf6e009401e9.gif)
 
-##  Useful definitions
+## Useful definitions
 
 1. Length of a simulation = How many points/coordinates were used in that simulation
 2. Execution time = How long it takes the program to complete the simulation
@@ -34,29 +34,26 @@ I instead opted to slice the diagram into a fourth as shown below.
 
 The area of the region inside the quarter circle is exactly equal to 1/4 the area of a full unit circle and since in this example we're using the unit circle as our baseline, the radius is equal to 1, the area of the region is as follows
 
-![area_region](https://i.imgur.com/a48xsbG.png)
+$$A_{quarter Circle}=\frac{{\pi}*r^{2}}{4}=\frac{\pi}{4}$$
 
+The area of a square in which the unit circle is inscribed is
 
-The area of a square in which the unit circle is inscribed is 
+$$A_{square}=s^2=(2r)^2=4r^2=4$$
 
-![area_of square](https://i.imgur.com/iH05MoS.png)
-
-
-The area of the square in the above diagram, which is a quarter of the area of the original square is 
-![area_of_circle](https://i.imgur.com/Q64n2sA.png)
-
+The area of the square in the above diagram, which is a quarter of the area of the original square is
+$$A_{quarter Square}=\frac{A_{square}}{4}=1$$
 
 With the areas determined, we can now determine the probability, if points are "placed" in the quarter square randomly, that they fall within the area of the quarter circle
 
-![point_quartercircle](https://i.imgur.com/nmglJhk.png)
- 
+$$P=\frac{A_{quarter Circle}}{A_{quarter Square}}=\frac{\pi}{4}$$
 
-So, by this chain of logic, we may construct a Monte Carlo simulation to determine a value for π by having the program generate 2 sets of random numbers (for the x and y dimensions) between 0 and 1. If, as the image above states, the sum of the 2 squares is less than 1, the point is counted as falling inside the area of the quarter circle. At the end, the experimental value of π is calculated by 
+So, by this chain of logic, we may construct a Monte Carlo simulation to determine a value for π by having the program generate 2 sets of random numbers (for the x and y dimensions) between 0 and 1. If, as the image above states, the sum of the 2 squares is less than 1, the point is counted as falling inside the area of the quarter circle. At the end, the experimental value of π is calculated by
 
 1. Dividing the number of points inside the quarter circle by the total amount of points "thrown".
 2. Multiply the ratio from above by 4, since otherwise, as the equation from above demonstrates, the result would be approaching π/4
 
 ## How the program works
+
 I used 4 Python libraries within my program. They and their function within my program are as follows:
 
 1. Mathplotlib.pyplot. I used this library to generate a visual representation of the data.
@@ -78,7 +75,7 @@ Project_outline was the original project proposal I submitted to my AP Statistic
 
 The Excel Workbooks directory contains all the data that I collected in my trials. I collected 10 runs per trial of a given length. The length went from 10 to 50 to 100 etc. I could not manage to do any length greater than 100,000 points within a reasonable timeframe. The original data (untouched other than minor formatting) is categorized by length and run number.
 
-The figure Snapshots directory stores all of the mathplot images for each run. 
+The figure Snapshots directory stores all of the mathplot images for each run.
 
 
 ## Example Mathplots
@@ -86,7 +83,7 @@ The figure Snapshots directory stores all of the mathplot images for each run.
 The following are visual representations of the data I collected.
 
 Respectively they are runs of length
-10, 50, 100, 500, 1000, 5000, 10000, 50000, and 100000 
+10, 50, 100, 500, 1000, 5000, 10000, 50000, and 100000
 
 ![10pi3](https://user-images.githubusercontent.com/24295451/48963663-9ed08080-ef65-11e8-9700-e17c8e68bf84.png)
 
@@ -107,6 +104,7 @@ Respectively they are runs of length
 ![100kpi3](https://user-images.githubusercontent.com/24295451/48963659-92e4be80-ef65-11e8-9da0-3cd3725eebb3.png)
 
 ## Credits
+
 https://github.com/dandrewmyers/numerical/blob/master/mc_pi.py - My code's foundation
 
 https://www.codecogs.com/latex/eqneditor.php - rerendered out my LaTEX equations because Github for some bizzare reason does not render LaTEX in ReadMe's
