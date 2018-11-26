@@ -1,10 +1,64 @@
 # StatsProject
-Using a Monte Carlo simulation to calculate a value for PI
+
+Using a Monte Carlo simulation to calculate a value for π
+
 ![2bb5d450319f0a721c07d202cc35d324](https://user-images.githubusercontent.com/24295451/48987535-e97d0480-f0ed-11e8-9820-bf6e009401e9.gif)
 
-## WIP
+##  Useful definitions
+
+1. Length of a simulation = How many points/coordinates were used in that simulation
+2. Execution time = How long it takes the program to complete the simulation
+3. Unit Circle = Circle of radius 1 with a center at the origin (0,0) on a standard coordinate system
+
+## Initial goals
+
+* Determine the association, if at all, between the accuracy of a simulation and the length of the simulation
+* Determine the association, if at all, between the spread of resulting values of π and how many coordinates/points were used in the simulation
+* Determine the association, if at all, between the length of the simulation and the execution time
+
+## Description of the methodology
+
+By definition, Monte Carlo simulations use random number sampling to obtain a desired numerical result. To understand the justification for using such a simulation to calculate an experimental value for π, one needs only a rudimentary knowledge of probability, algebra and geometry. 
+
+![unit_circle](http://mathfaculty.fullerton.edu/mathews/n2003/montecarlopi/MonteCarloPiMod/Images/MonteCarloPiMod_gr_5.gif)
+
+The above is the unit circle inscribed inside a square. While it is technically possible to run the simulation with this figure, I decided not to for several reasons
+
+1. This is a larger area and the resultant data would be equivalent to data acquired from a smaller segment
+2. It would be more difficult, in my view, to understand the visual representation
+3. The side length of the square is double the magnitude of the circle's radius. Because of this, the calculations would be more complex
+
+I instead opted to slice the diagram into a fourth as shown below.
+
+![quarter_segment](https://i.stack.imgur.com/c9Qhr.png)
+
+The area of the region inside the quarter circle is exactly equal to 1/4 the area of a full unit circle and since in this example we're using the unit circle as our baseline, the radius is equal to 1, the area of the region is as follows
+
+$$A_{quarter Circle}=\frac{\pi*r^2}{4}=\frac{\pi}{4}$$
+
+The area of a square in which the unit circle is inscribed is 
+$$A_{square}=s^2=(2r)^2=4r^2=4$$
+
+The area of the square in the above diagram, which is a quarter of the area of the original square is 
+$$A_{quarter Square}=\frac{A_{square}}{4}=1$$
+
+With the areas determined, we can now determine the probability, if points are "placed" in the quarter square randomly, that they fall within the area of the quarter circle
+$$P=\frac{A_{quarter Circle}}{A_{quarter Square}}=\frac{\pi}{4}$$ 
+
+So, by this chain of logic, we may construct a Monte Carlo simulation to determine a value for π by having the program generate 2 sets of random numbers (for the x and y dimensions) between 0 and 1. If, as the image above states, the sum of the 2 squares is less than 1, the point is counted as falling inside the area of the quarter circle. At the end, the experimental value of π is calculated by 
+
+1. Dividing the number of points inside the quarter circle by the total amount of points "thrown".
+2. Multiply the ratio from above by 4, since otherwise, as the equation from above demonstrates, the result would be approaching π/4
+
+## How the program works
+I used 4 python libraries within my program. They and their function within my program are as follows:
+
+1. Mathplotlib.pyplot. I used this library to generate a visual representation of the data.
+2. Numpy. This library was used to make arrays to store the coordinate data. That data was used to calculate the experimental value for Pi. It was also later exported to pyplot and xlsxwriter. Numpy also contained a builtin value for pi that I used to compare the experimental value against.
+3. Xlsxwriter. This library was used to export my data to excel once 
 
 ## Mathplots
+
 The following are visual representations of the data I collected.
 
 Respectively they are runs of length
