@@ -35,21 +35,21 @@ I instead opted to slice the diagram into a fourth as shown below.
 The area of the region inside the quarter circle is exactly equal to 1/4 the area of a full unit circle and since in this example we're using the unit circle as our baseline, the radius is equal to 1, the area of the region is as follows
 
 ![area_region](https://i.imgur.com/a48xsbG.png)
-$$A_{quarter Circle}=\frac{{\pi}*r^{2}}{4}=\frac{\pi}{4}$$
+
 
 The area of a square in which the unit circle is inscribed is 
 
 ![area_of square](https://i.imgur.com/iH05MoS.png)
-$$A_{square}=s^2=(2r)^2=4r^2=4$$
+
 
 The area of the square in the above diagram, which is a quarter of the area of the original square is 
 ![area_of_circle](https://i.imgur.com/Q64n2sA.png)
-$$A_{quarter Square}=\frac{A_{square}}{4}=1$$
+
 
 With the areas determined, we can now determine the probability, if points are "placed" in the quarter square randomly, that they fall within the area of the quarter circle
 
 ![point_quartercircle](https://i.imgur.com/nmglJhk.png)
-$$P=\frac{A_{quarter Circle}}{A_{quarter Square}}=\frac{\pi}{4}$$ 
+ 
 
 So, by this chain of logic, we may construct a Monte Carlo simulation to determine a value for π by having the program generate 2 sets of random numbers (for the x and y dimensions) between 0 and 1. If, as the image above states, the sum of the 2 squares is less than 1, the point is counted as falling inside the area of the quarter circle. At the end, the experimental value of π is calculated by 
 
