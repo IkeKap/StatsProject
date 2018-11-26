@@ -22,7 +22,7 @@ By definition, Monte Carlo simulations use random number sampling to obtain a de
 
 ![unit_circle](http://mathfaculty.fullerton.edu/mathews/n2003/montecarlopi/MonteCarloPiMod/Images/MonteCarloPiMod_gr_5.gif)
 
-The above is the unit circle inscribed inside a square. While it is technically possible to run the simulation with this figure, I decided not to for several reasons
+The above is the unit circle inscribed inside a square. While it is technically possible to run the simulation with this figure, I decided not to for several reasons.
 
 1. This is a larger area and the resultant data would be equivalent to data acquired from a smaller segment
 2. It would be more difficult, in my view, to understand the visual representation
@@ -34,15 +34,21 @@ I instead opted to slice the diagram into a fourth as shown below.
 
 The area of the region inside the quarter circle is exactly equal to 1/4 the area of a full unit circle and since in this example we're using the unit circle as our baseline, the radius is equal to 1, the area of the region is as follows
 
-$$A_{quarter Circle}=\frac{\pi*r^2}{4}=\frac{\pi}{4}$$
+![area_region](https://i.imgur.com/a48xsbG.png)
+$$A_{quarter Circle}=\frac{{\pi}*r^{2}}{4}=\frac{\pi}{4}$$
 
 The area of a square in which the unit circle is inscribed is 
+
+![area_of square](https://i.imgur.com/iH05MoS.png)
 $$A_{square}=s^2=(2r)^2=4r^2=4$$
 
 The area of the square in the above diagram, which is a quarter of the area of the original square is 
+![area_of_circle](https://i.imgur.com/Q64n2sA.png)
 $$A_{quarter Square}=\frac{A_{square}}{4}=1$$
 
 With the areas determined, we can now determine the probability, if points are "placed" in the quarter square randomly, that they fall within the area of the quarter circle
+
+![point_quartercircle](https://i.imgur.com/nmglJhk.png)
 $$P=\frac{A_{quarter Circle}}{A_{quarter Square}}=\frac{\pi}{4}$$ 
 
 So, by this chain of logic, we may construct a Monte Carlo simulation to determine a value for π by having the program generate 2 sets of random numbers (for the x and y dimensions) between 0 and 1. If, as the image above states, the sum of the 2 squares is less than 1, the point is counted as falling inside the area of the quarter circle. At the end, the experimental value of π is calculated by 
@@ -51,13 +57,31 @@ So, by this chain of logic, we may construct a Monte Carlo simulation to determi
 2. Multiply the ratio from above by 4, since otherwise, as the equation from above demonstrates, the result would be approaching π/4
 
 ## How the program works
-I used 4 python libraries within my program. They and their function within my program are as follows:
+I used 4 Python libraries within my program. They and their function within my program are as follows:
 
 1. Mathplotlib.pyplot. I used this library to generate a visual representation of the data.
-2. Numpy. This library was used to make arrays to store the coordinate data. That data was used to calculate the experimental value for Pi. It was also later exported to pyplot and xlsxwriter. Numpy also contained a builtin value for pi that I used to compare the experimental value against.
-3. Xlsxwriter. This library was used to export my data to excel once 
+2. Numpy. This library was used to make arrays to store the coordinate data. That data was used to calculate the experimental value for Pi. It was also later exported to pyplot and xlsxwriter. Numpy also contained a built-in value for pi that I used to compare the experimental value against.
+3. Xlsxwriter. This library was used to export my data to excel once the run is complete and the data is completely collected. One limitation of this library was that it did not support writing to pre-existing excel documents. Because of this, I split the data by run and later combined 10 runs of the same length into 1 excel document by trial, and combined those trials into 1 final document.
+4. Time. I used the built-in time package to measure the execution time of a run.
 
-## Mathplots
+Line 9 of my code is what controls the length of a run. I commented out the input section to make data collection faster for myself, but if it is desirable for you to control it via console input, feel free to uncomment it.
+
+Once a run is completed, an excel document (with its name defined based on line 15) is generated in the root directory and a mathplot diagram is displayed. Points that fall inside the area of the curve are marked with a blue color and points that fall outside are marked with a red color to make them more distinct from one another.
+
+## Layout of the repository
+
+Main.<span>py is the main program. This is what I used for my data collection.
+
+mc_pi<span>.py is a reference code that I found online at [this](https://github.com/dandrewmyers/numerical/blob/master/mc_pi.py) address. Credits for this piece of code got to @dandrewmyers. I used this code as the basis for my code but heavily modified it. As the code had no license attached, I assumed that the code was open-source. My version has the MIT license attached so the code can be used without many limitations (see LICENSE for full legalese). 
+
+Project_outline was the original project proposal I submitted to my AP Statistics teacher
+
+The Excel Workbooks directory contains all the data that I collected in my trials. I collected 10 runs per trial of a given length. The length went from 10 to 50 to 100 etc. I could not manage to do any length greater than 100,000 points within a reasonable timeframe. The original data (untouched other than minor formatting) is categorized by length and run number.
+
+The figure Snapshots directory stores all of the mathplot images for each run. 
+
+
+## Example Mathplots
 
 The following are visual representations of the data I collected.
 
@@ -81,3 +105,12 @@ Respectively they are runs of length
 ![50kpi3](https://user-images.githubusercontent.com/24295451/48964280-e8bf6380-ef71-11e8-9aac-e62f1fa28424.png)
 
 ![100kpi3](https://user-images.githubusercontent.com/24295451/48963659-92e4be80-ef65-11e8-9da0-3cd3725eebb3.png)
+
+## Credits
+https://github.com/dandrewmyers/numerical/blob/master/mc_pi.py - My code's foundation
+
+https://www.codecogs.com/latex/eqneditor.php - rerendered out my LaTEX equations because Github for some bizzare reason does not render LaTEX in ReadMe's
+
+http://mathfaculty.fullerton.edu/mathews/n2003/montecarlopimod.html
+https://academo.org/demos/estimating-pi-monte-carlo/ 
+Both of these links described the math behind my program. 
