@@ -77,6 +77,7 @@ The Excel Workbooks directory contains all the data that I collected in my trial
 
 The figure Snapshots directory stores all of the mathplot images for each run.
 
+The tex directory is a directory used by a github app attached to this repository. Its function is to render out the LaTEX equations within the readme automatically
 
 ## Example Mathplots
 
