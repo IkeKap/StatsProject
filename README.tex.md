@@ -4,6 +4,7 @@ Using a Monte Carlo simulation to calculate a value for π
 
 ![2bb5d450319f0a721c07d202cc35d324](https://user-images.githubusercontent.com/24295451/48987535-e97d0480-f0ed-11e8-9820-bf6e009401e9.gif)
 
+![2nd GIF](https://i.gyazo.com/818484a04fd1efd1ff76974a2ce36d29.gif)
 ## Useful definitions
 
 1. Length of a simulation = How many points/coordinates were used in that simulation
@@ -18,7 +19,7 @@ Using a Monte Carlo simulation to calculate a value for π
 
 ## Description of the methodology
 
-By definition, Monte Carlo simulations use random number sampling to obtain a desired numerical result. To understand the justification for using such a simulation to calculate an experimental value for π, one needs only a rudimentary knowledge of probability, algebra and geometry. 
+By definition, Monte Carlo simulations use random number sampling to obtain a desired numerical result. To understand the justification for using such a simulation to calculate an experimental value for π, one needs only a rudimentary knowledge of probability, algebra and geometry.
 
 ![unit_circle](http://mathfaculty.fullerton.edu/mathews/n2003/montecarlopi/MonteCarloPiMod/Images/MonteCarloPiMod_gr_5.gif)
 
@@ -69,7 +70,7 @@ Once a run is completed, an excel document (with its name defined based on line 
 
 Main.<span>py is the main program. This is what I used for my data collection.
 
-mc_pi<span>.py is a reference code that I found online at [this](https://github.com/dandrewmyers/numerical/blob/master/mc_pi.py) address. Credits for this piece of code got to @dandrewmyers. I used this code as the basis for my code but heavily modified it. As the code had no license attached, I assumed that the code was open-source. My version has the MIT license attached so the code can be used without many limitations (see LICENSE for full legalese). 
+mc_pi<span>.py is a reference code that I found online at [this](https://github.com/dandrewmyers/numerical/blob/master/mc_pi.py) address. Credits for this piece of code got to @dandrewmyers. I used this code as the basis for my code but heavily modified it. As the code had no license attached, I assumed that the code was open-source. My version has the MIT license attached so the code can be used without many limitations (see LICENSE for full legalese).
 
 Project_outline was the original project proposal I submitted to my AP Statistics teacher
 
@@ -111,5 +112,5 @@ https://github.com/dandrewmyers/numerical/blob/master/mc_pi.py - My code's found
 https://www.codecogs.com/latex/eqneditor.php - rerendered out my LaTEX equations because Github for some bizzare reason does not render LaTEX in ReadMe's
 
 http://mathfaculty.fullerton.edu/mathews/n2003/montecarlopimod.html
-https://academo.org/demos/estimating-pi-monte-carlo/ 
-Both of these links described the math behind my program. 
+https://academo.org/demos/estimating-pi-monte-carlo/
+Both of these links described the math behind my program.
