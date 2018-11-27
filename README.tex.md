@@ -5,6 +5,7 @@ Using a Monte Carlo simulation to calculate a value for π
 ![2bb5d450319f0a721c07d202cc35d324](https://user-images.githubusercontent.com/24295451/48987535-e97d0480-f0ed-11e8-9820-bf6e009401e9.gif)
 
 ![2nd GIF](https://i.gyazo.com/818484a04fd1efd1ff76974a2ce36d29.gif)
+
 ## Useful definitions
 
 1. Length of a simulation = How many points/coordinates were used in that simulation
