@@ -22,7 +22,7 @@ Using a Monte Carlo simulation to calculate a value for π
 
 By definition, Monte Carlo simulations use random number sampling to obtain a desired numerical result. To understand the justification for using such a simulation to calculate an experimental value for π, one needs only a rudimentary knowledge of probability, algebra and geometry.
 
-![unit_circle](http://mathfaculty.fullerton.edu/mathews/n2003/montecarlopi/MonteCarloPiMod/Images/MonteCarloPiMod_gr_5.gif)
+![unit_circle](MonteCarloPiMod_gr_5.gif)
 
 The above is the unit circle inscribed inside a square. While it is technically possible to run the simulation with this figure, I decided not to for several reasons.
 
