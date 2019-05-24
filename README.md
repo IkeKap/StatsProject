@@ -113,5 +113,7 @@ https://github.com/dandrewmyers/numerical/blob/master/mc_pi.py - My code's found
 https://www.codecogs.com/latex/eqneditor.php - rerendered out my LaTEX equations because Github for some bizzare reason does not render LaTEX in ReadMe's
 
 http://mathfaculty.fullerton.edu/mathews/n2003/montecarlopimod.html
+and
 https://academo.org/demos/estimating-pi-monte-carlo/
+
 Both of these links described the math behind my program.
