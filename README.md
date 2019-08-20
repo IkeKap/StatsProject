@@ -114,8 +114,6 @@ Respectively they are runs of length
 
 https://github.com/dandrewmyers/numerical/blob/master/mc_pi.py - My code's foundation. **This link has since been taken offline** but I have the original stored in this repository
 
-https://www.codecogs.com/latex/eqneditor.php - rerendered out my LaTEX equations because Github for some bizzare reason does not render LaTEX in ReadMe's
-
 http://mathfaculty.fullerton.edu/mathews/n2003/montecarlopimod.html
 and
 https://academo.org/demos/estimating-pi-monte-carlo/
