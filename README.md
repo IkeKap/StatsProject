@@ -71,7 +71,7 @@ Once a run is completed, an excel document (with its name defined based on line 
 
 Main.<span>py is the main program. This is what I used for my data collection.
 
-mc_pi<span>.py is a reference code that I found online at [this](https://github.com/dandrewmyers/numerical/blob/master/mc_pi.py) address. Credits for this piece of code got to @dandrewmyers. I used this code as the basis for my code but heavily modified it. As the code had no license attached, I assumed that the code was open-source. My version has the MIT license attached so the code can be used without many limitations (see LICENSE for full legalese).
+mc_pi<span>.py is a reference code that I found online. Credits for this piece of code got to @dandrewmyers on Github (see note in Credits section). I used this code as the basis for my code but heavily modified it. As the code had no license attached and was given freely on a public forum, I assumed that the code was open to public use. My version has the MIT license attached so the code can be used without many limitations (see LICENSE for full legalese).
 
 Project_outline was the original project proposal I submitted to my AP Statistics teacher
 
@@ -80,6 +80,8 @@ The Excel Workbooks directory contains all the data that I collected in my trial
 The figure Snapshots directory stores all of the mathplot images for each run.
 
 The tex directory is a directory used by a github app attached to this repository. Its function is to render out the LaTEX equations within the readme automatically
+
+This repository also includes the final project report (in DOCX format) and presentation (in PPTX format). I also included the speaker notes (in DOCX format) I used to prepare my presentation. This project was a group effort between me and 3 other classmates in my AP Statistics class. I was responsible for setting up the python simulation and collecting data, and the rest of my group took responsibility for analyzing the data, and using that to come to conclusions. We all worked together on the final report, but the powerpoint was largely created by my group members.
 
 ## Example Mathplots
 
@@ -108,7 +110,7 @@ Respectively they are runs of length
 
 ## Credits
 
-https://github.com/dandrewmyers/numerical/blob/master/mc_pi.py - My code's foundation
+https://github.com/dandrewmyers/numerical/blob/master/mc_pi.py - My code's foundation. **This link has since been taken offline** but I have the original stored in this repository
 
 https://www.codecogs.com/latex/eqneditor.php - rerendered out my LaTEX equations because Github for some bizzare reason does not render LaTEX in ReadMe's
 
