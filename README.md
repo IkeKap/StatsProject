@@ -81,7 +81,9 @@ The figure Snapshots directory stores all of the mathplot images for each run.
 
 The tex directory is a directory used by a github app attached to this repository. Its function is to render out the LaTEX equations within the readme automatically
 
-This repository also includes the final project report (in DOCX format) and presentation (in PPTX format). I also included the speaker notes (in DOCX format) I used to prepare my presentation. This project was a group effort between me and 3 other classmates in my AP Statistics class. I was responsible for setting up the python simulation and collecting data, and the rest of my group took responsibility for analyzing the data, and using that to come to conclusions. We all worked together on the final report, but the powerpoint was largely created by my group members.
+This repository also includes the final project report (in DOCX format) and presentation (in PPTX format). I also included the speaker notes (in DOCX format) I used to prepare the presentation. 
+
+For this AP Statistics group project,  I was responsible for setting up the python simulation and collecting data, and the rest of my group took responsibility for analyzing the data, and using that to come to conclusions. We all worked together on the final report, but the powerpoint was largely created by my group members.
 
 ## Example Mathplots
 
