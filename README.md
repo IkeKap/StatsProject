@@ -14,9 +14,9 @@ Using a Monte Carlo simulation to calculate a value for π
 
 ## Initial goals
 
-* Determine the association, if at all, between the accuracy of a simulation and the length of the simulation
-* Determine the association, if at all, between the spread of resulting values of π and how many coordinates/points were used in the simulation
-* Determine the association, if at all, between the length of the simulation and the execution time
+* Determine the association, if any exists, between the accuracy of a simulation and the length of the simulation
+* Determine the association, if any exists, between the spread of resulting values of π and how many coordinates/points were used in the simulation
+* Determine the association, if any exists, between the length of the simulation and the execution time
 
 ## Description of the methodology
 
